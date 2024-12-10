@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <world name="simple_world">
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- Walls with Reduced Height -->
+    <include>
+      <uri>model://grey_wall</uri>
+      <pose>0 5 0 0 0 0</pose>
+      <name>grey_wall_1</name>
+      <scale>1 1 0.5</scale>  
+    </include>
+    <include>
+      <uri>model://grey_wall</uri>
+      <pose>0 -5 0 0 0 0</pose>
+      <name>grey_wall_2</name>
+      <scale>1 1 0.5</scale>  
+    </include>
+    <include>
+      <uri>model://grey_wall</uri>
+      <pose>5 0 0 0 0 1.57</pose>
+      <name>grey_wall_3</name>
+      <scale>1 1 0.5</scale>  
+    </include>
+    <include>
+      <uri>model://grey_wall</uri>
+      <pose>-5 0 0 0 0 1.57</pose>
+      <name>grey_wall_4</name>
+      <scale>1 1 0.5</scale>  
+    </include>
+
+    <!-- Cones -->
+    <include>
+      <uri>model://construction_cone</uri>
+      <pose>4.5 4.5 0 0 0 0</pose>
+      <name>construction_cone_1</name>
+    </include>
+    <include>
+      <uri>model://construction_cone</uri>
+      <pose>-4.5 4.5 0 0 0 0</pose>
+      <name>construction_cone_2</name>
+    </include>
+    <include>
+      <uri>model://construction_cone</uri>
+      <pose>4.5 -4.5 0 0 0 0</pose>
+      <name>construction_cone_3</name>
+    </include>
+    <include>
+      <uri>model://construction_cone</uri>
+      <pose>-4.5 -4.5 0 0 0 0</pose>
+      <name>construction_cone_4</name>
+    </include>
+  </world>
+</sdf>

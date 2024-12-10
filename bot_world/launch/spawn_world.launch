@@ -1,0 +1,14 @@
+<launch>
+
+  <arg name="world_file" default="$(find bot_world)/worlds/simple_world.world"/>
+  
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(arg world_file)" />
+  </include>
+
+  <arg name="model" default="$(find bot_description)/urdf/robot.urdf"/>
+  <param name="robot_description" command="$(find xacro)/xacro $(arg model)" />
+
+
+  <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" output="screen" args="-param robot_description -urdf -model robot" />
+</launch>
